@@ -53,7 +53,7 @@ public class IfStatementsTests {
     void AddToPositiveOrNegativeSum1() throws IOException {
         System.setIn(new FileInputStream("data_files/pos_neg1.txt"));
         AddToPositiveOrNegativeSum.main(null);
-        assertTrue(outContent.toString().contains("The sum of the positive numbers is 45\n" +
+        assertTrue(outContent.toString().contains("The sum of the positive numbers is 45\r\n" +
                 "The sum of the negative numbers is 0"));
     }
 
@@ -61,7 +61,7 @@ public class IfStatementsTests {
     void AddToPositiveOrNegativeSum2() throws IOException {
         System.setIn(new FileInputStream("data_files/pos_neg2.txt"));
         AddToPositiveOrNegativeSum.main(null);
-        assertTrue(outContent.toString().contains("The sum of the positive numbers is 0\n" +
+        assertTrue(outContent.toString().contains("The sum of the positive numbers is 0\r\n" +
                 "The sum of the negative numbers is -55"));
     }
 
@@ -69,7 +69,7 @@ public class IfStatementsTests {
     void AddToPositiveOrNegativeSum3() throws IOException {
         System.setIn(new FileInputStream("data_files/pos_neg3.txt"));
         AddToPositiveOrNegativeSum.main(null);
-        assertTrue(outContent.toString().contains("The sum of the positive numbers is 15\n" +
+        assertTrue(outContent.toString().contains("The sum of the positive numbers is 15\r\n" +
                 "The sum of the negative numbers is -15"));
     }
 }
