@@ -8,6 +8,9 @@ public class Season {
                 return "Winter";
             }
         }
-        else if () /* do Spring here */
+        else if (month == 0) {
+            /* do Spring here */
+        }
+        return "hi";
     }
 }
