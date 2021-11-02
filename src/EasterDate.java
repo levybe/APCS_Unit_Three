@@ -16,25 +16,17 @@ public class EasterDate {
         int c = year % 7;
         int d = (19*a + 24) % 30;
         int e = (2*b + 4*c + 6*d + 5) % 7;
+        int day = 22 + d + e;
         String month;
         if ((year == 1954) || (year == 1981) || (year == 2049) || (year == 2076)) {
-            e -= 7;
+            day-= 7;
         }
-        if (e == 0) {
-            d -= 1;
-            e = 31;
-        }
-        if (d == 3) {
-            month = "March";
-        }
-        else if (d == 4) {
-            month = "April";
+        if (day > 31) {
+            return "In " + year + " Easter is on April " + (day - 31);
         }
         else {
-            month = "SOMETHING'S WRONG";
+            return "In " + year + " Easter is on March " + day;
         }
-        return "In " + year + " Easter is on " + month + " " + (22 + d + e);
-
     }
 
     public static void main (String[] args) {
